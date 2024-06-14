@@ -1,5 +1,19 @@
 https://github.com/plemeri/transparent-background
 
+# Transparent Background for ComfyUI
+
+![Sample Image](sample/demo.png)
+
+
+## Nodes Description
+
+### RemoveBackgroundNode
+The `RemoveBackgroundNode` is designed to remove the background from an image. It takes an image tensor as input and returns two outputs: the image with the background removed and a mask. The mask is derived from the alpha channel of the processed image. The node utilizes the `Remover` class from the `transparent_background` package to perform the background removal.
+
+### FillTransparentNode
+The `FillTransparentNode` is used to fill transparent areas in an image with a specified color. It takes an image tensor and three integer values representing the red, green, and blue components of the fill color. The node returns the image with the transparent areas filled with the specified color. The process involves converting the image tensor to a PIL image, creating a new background with the specified color, and pasting the original image onto this background. The final image is then converted back to a tensor.
+
+
 # Transparent Background
 
 <p align="center">
